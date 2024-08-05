@@ -1,24 +1,49 @@
-.wrapper{
+html, body{
+    height: 100%;
     width: 100%;
-    padding: 20px;
+    overflow: hidden;
+    margin: 0;
+}
+.grass, .sky, .road{
+    position: relative;
+}
+.sky{
+    height: 40%;
+    background-color: skyblue;
+}
+.grass{
+    height: 30%;
+    background-color: seagreen;
+}
+.road{
+    height: 30%;
+    background-color: dimgray;
     box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
 }
-body{
-    background-color: lightblue;
-    text-align: center;
+.lines{
+    box-sizing: border-box;
+    border: 5px dashed white;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
 }
-.circle{
-    width: 100px;
-    padding: 50px 0;
-    line-height: 0;
-    margin: 60px auto;
-    background-color: pink;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background 1s, transform 1s 1s ease-in;
+.mario{
+    transform: scale(0.75);
+    position: absolute;
+    top: -30px;
+    left: -15px;
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    /* animation-iteration-count: 3; */
+    animation-iteration-count: infinite;
 }
-.circle:hover{
-    background-color: salmon;
-    transform: rotateX(360deg);
+@keyframes drive {
+    from{transform: translateX(-100px) scale(0.75);}
+    to{transform: translateX(800px) scale(0.75);}
 }
