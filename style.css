@@ -42,6 +42,19 @@ html, body{
     animation-delay: 2s;
     /* animation-iteration-count: 3; */
     animation-iteration-count: infinite;
+    /* animation-timing-function: cubic-bezier(0,.77,1,.28); */
+    animation-timing-function: linear;
+}
+.luigi{
+    transform: scale(0.75);
+    position: absolute;
+    top: 75px;
+    left: -15px;animation-name: drive;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
 }
 @keyframes drive {
     from{transform: translateX(-100px) scale(0.75);}
