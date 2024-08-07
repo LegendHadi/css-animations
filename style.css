@@ -36,14 +36,15 @@ html, body{
     position: absolute;
     top: -30px;
     left: -15px;
-    animation-name: drive;
+    /* animation-name: drive;
     animation-duration: 3s;
     animation-fill-mode: both;
-    animation-delay: 2s;
+    animation-delay: 2s; */
     /* animation-iteration-count: 3; */
-    animation-iteration-count: infinite;
+    /* animation-iteration-count: infinite; */
     /* animation-timing-function: cubic-bezier(0,.77,1,.28); */
-    animation-timing-function: linear;
+    /* animation-timing-function: linear; */
+    animation: drive 3s linear infinite both, jump 0.3s 1.2s ease;
 }
 .luigi{
     transform: scale(0.75);
@@ -56,7 +57,30 @@ html, body{
     animation-direction: reverse;
     animation-timing-function: linear;
 }
+.cloud{
+    position: absolute;
+}
+.cloud:nth-child(1){
+    width: 200px;
+    top: 120px;
+    opacity: 0.5;
+    animation: wind 80s linear infinite reverse;
+}
+.cloud:nth-child(2){
+    width: 300px;
+    top: 0;
+    animation: wind 50s linear infinite;
+}
 @keyframes drive {
     from{transform: translateX(-100px) scale(0.75);}
     to{transform: translateX(800px) scale(0.75);}
+}
+@keyframes wind {
+    from{left: -300px;}
+    to{left: 100%;}
+}
+@keyframes jump {
+    0%{top: -30px;}
+    50%{top: -100px;}
+    100%{top: -30px;}
 }
