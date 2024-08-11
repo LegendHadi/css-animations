@@ -1,9 +1,14 @@
 This project shows 4 basic animations.
+
 These animations are about:
+
 1: Driving animation
+
 2: Pop-up animation
+
 3: Shop animation
-4: Panels animations
+
+4: Panels animation
 
 https://github.com/user-attachments/assets/14c83d40-7fb6-4dd5-ad70-26016f1265a4
 
